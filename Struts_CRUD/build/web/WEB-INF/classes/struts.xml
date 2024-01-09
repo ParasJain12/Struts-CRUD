@@ -1,0 +1,21 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="login" class="com.uni.controller.MyController" method="login">
+            <result name="success">UserHome.jsp</result>
+            <result name="admin">AdminHome.jsp</result>
+            <result name="error">Error.jsp</result>
+        </action>
+        <action name="register" class="com.uni.controller.MyController">
+            <result name="success">register.jsp</result>
+        </action>
+        <action name="registerUser" class="com.uni.controller.MyController" method="insertUser">
+            <result name="success">index.jsp</result>
+            <result name="error">Error.jsp</result>
+        </action>
+    </package>
+</struts>
